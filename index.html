@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="min-h-full h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
     </style>
     <title>Document</title>
   </head>
-  <body>
+  <body class="min-h-full relative">
     <nav class="flex items-center justify-between px-20 py-5 bg-gradient-to-r from-cyan-500 to-[#edca7d]">
       <div>
         <p class="text-2xl">Admin</p>
@@ -35,100 +35,112 @@
         </a>
       </div>
     </nav>
-    <div class="sidebar  bg-gradient-to-b from-cyan-500 to-[#edca7d] absolute left-0 w-2/12 pb-5">
-      <div class="my-5">
-        <img src="./logo.png" alt="Logo" class="w-1/2 mx-auto" />
-        <p class="text-wrap md:text-xl text-center">
-          شركة مهارات السعودية المحدودة
-        </p>
+
+    <main class="flex min-h-full h-full absolute bottom-0 top-20 w-full ">
+      <div class="sidebar  bg-gradient-to-b from-cyan-500 to-[#edca7d] xl:tetx w-1/5 pb-5 h-full  ">
+        <div class="py-5">
+          <img src="./logo.png" alt="Logo" class="w-1/2 mx-auto" />
+          <p class="text-wrap md:text-xl text-center">
+            شركة مهارات السعودية المحدودة
+          </p>
+        </div>
+        <ul class="mt-5">
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">⚠️</i><span>موظفون غير نشطين</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">📧</i><span>إرسال بريد إلكتروني</span></a
+            >
+          </li>
+  
+          <li>
+            <button
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all relative w-full"
+              href="#"
+              onclick="toggleDropdown(this)"
+              ><i class="mr-2 ml-5">🏢</i><span>الشركات</span> <span class="absolute right-5"> <i class="fas transition-all duration-300 fa-chevron-down"></i> </span></
+            ></button>
+            <div
+              class="  flex-col justify-center  transition-all dropdown relative  hidden"
+            >
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">إضافة شركة</a>
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">بيانات الشركات</a>
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">تغيير كلمة المرور</a>
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">تفعيل وتحليل الشركات</a>
+            </div>
+          </li>
+  
+          <li>
+            <button
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all relative w-full"
+              href="#"
+              onclick="toggleDropdown(this)"
+              ><i class="mr-2 ml-5">📋</i><span>الفواتير</span> <span class="absolute right-5"> <i class="fas transition-all duration-300 fa-chevron-down"></i> </span></
+            ></button>
+            <div
+              class="  flex-col justify-center  transition-all dropdown relative  hidden"
+            >
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">فواتير جديدة</a>
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">فواتير تم تحصيلها</a>
+              <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">فواتير ملغاه</a>
+            </div>
+          </li>
+  
+         
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">🕒</i><span>تقرير الحضور والانصراف</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">📄</i><span>تقرير حذف الموظفين</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">📊</i><span>تقرير تقييم الأداء</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">🔍</i><span>إرسال تقييم الأداء للوزارة</span></a
+            >
+          </li>
+          <li>
+            <a
+              class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
+              href="#"
+              ><i class="mr-2 ml-5">📊</i><span>موظفي موارد</span></a
+            >
+          </li>
+        </ul>
       </div>
-      <ul class="mt-5">
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">⚠️</i><span>موظفون غير نشطين</span></a
-          >
-        </li>
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">📧</i><span>إرسال بريد إلكتروني</span></a
-          >
-        </li>
 
-        <li>
-          <button
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all relative w-full"
-            href="#"
-            onclick="toggleDropdown(this)"
-            ><i class="mr-2 ml-5">🏢</i><span>الشركات</span> <span class="absolute right-5"> <i class="fas transition-all duration-300 fa-chevron-down"></i> </span></
-          ></button>
-          <div
-            class="  flex-col justify-center  transition-all dropdown relative  hidden"
-          >
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">إضافة شركة</a>
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">بيانات الشركات</a>
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">تغيير كلمة المرور</a>
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">تفعيل وتحليل الشركات</a>
-          </div>
-        </li>
+      <div class="bg-gray-200 p-5">
+        <div class=" bg-white p-5  h-full" style="box-shadow: rgba(0,0,0,0.4) 0px 0px 20px ;">
 
-        <li>
-          <button
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all relative w-full"
-            href="#"
-            onclick="toggleDropdown(this)"
-            ><i class="mr-2 ml-5">📋</i><span>الفواتير</span> <span class="absolute right-5"> <i class="fas transition-all duration-300 fa-chevron-down"></i> </span></
-          ></button>
-          <div
-            class="  flex-col justify-center  transition-all dropdown relative  hidden"
-          >
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">فواتير جديدة</a>
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">فواتير تم تحصيلها</a>
-            <a class="hover:bg-[#a4e396] pl-16 py-2" href="#">فواتير ملغاه</a>
-          </div>
-        </li>
+          <!-- Your content goes here المحتوى مكانه هنا --> 
+           
+        </div>
+      </div>
 
-       
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">🕒</i><span>تقرير الحضور والانصراف</span></a
-          >
-        </li>
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">📄</i><span>تقرير حذف الموظفين</span></a
-          >
-        </li>
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">📊</i><span>تقرير تقييم الأداء</span></a
-          >
-        </li>
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">🔍</i><span>إرسال تقييم الأداء للوزارة</span></a
-          >
-        </li>
-        <li>
-          <a
-            class="py-4 px-4 flex items-center hover:bg-[#a4e396] transition-all"
-            href="#"
-            ><i class="mr-2 ml-5">📊</i><span>موظفي موارد</span></a
-          >
-        </li>
-      </ul>
-    </div>
+    </main>
 
     <script>
         function toggleDropdown(element) {
