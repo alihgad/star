@@ -17,9 +17,20 @@
     <title>Document</title>
   </head>
   <body class="min-h-full relative">
-    <nav class="flex items-center justify-between px-20 py-5 bg-gradient-to-r from-cyan-500 to-[#edca7d]">
-      <div>
-        <p class="text-2xl">Admin</p>
+    <nav class="flex items-center justify-between px-5 sm:px-20 py-5 bg-gradient-to-r from-cyan-500 to-[#edca7d] ">
+      <div class="flex items-center burger " >
+        <div class="cursor-pointer">
+          <span class="block w-5 h-1 bg-black rounded-lg mb-1">
+            
+          </span>
+          <span class="block w-5 h-1 bg-black rounded-lg mb-1">
+            
+          </span>
+          <span class="block w-5 h-1 bg-black rounded-lg">
+            
+          </span>
+        </div>
+        <p class="text-2xl ms-3 sm:ms-0">Admin</p>
       </div>
       <div dir="rtl" class="flex gap-5 items-center">
         <a href="  ">
@@ -36,8 +47,8 @@
       </div>
     </nav>
 
-    <main class="flex min-h-full h-full absolute bottom-0 top-20 w-full ">
-      <div class="sidebar  bg-gradient-to-b from-cyan-500 to-[#edca7d] xl:tetx w-1/5 pb-5 h-full  ">
+    <main class="grid grid-cols-6 min-h-full h-fit sm:h-full absolute bottom-0 top-20  w-full ">
+      <div class="sidebar  bg-gradient-to-b from-cyan-500 to-[#edca7d]   pb-5 h-full absolute -left-full sm:left-0 sm:relative bottom-0  transition-all duration-500">
         <div class="py-5">
           <img src="./logo.png" alt="Logo" class="w-1/2 mx-auto" />
           <p class="text-wrap md:text-xl text-center">
@@ -132,10 +143,11 @@
         </ul>
       </div>
 
-      <div class="bg-gray-200 p-5">
+      <div class="bg-gray-200 p-5 col-span-6 sm:col-span-5">
         <div class=" bg-white p-5  h-full" style="box-shadow: rgba(0,0,0,0.4) 0px 0px 20px ;">
 
           <!-- Your content goes here المحتوى مكانه هنا --> 
+           Lorem ipsum dolor sit amet consectetur adipisicing elit fugit. Delectus numquam, facilis voluptatibus autem omnis nulla quam. Rem, molestiae labore! Minus veniam commodi voluptatum fugiat temporibus non, distinctio voluptates corporis culpa obcaecati laudantium quidem eius ab dolorum numquam et vero. Rem ex dolorum illo et quaerat tenetur nostrum officiis perferendis ratione! Iste hic ut obcaecati perspiciatis quos maiores tenetur amet ex repellendus non aspernatur labore inventore doloribus mollitia, unde temporibus dolores repellat blanditiis ratione! Modi quis magni veniam natus beatae facilis ea repudiandae officia rerum sed, velit numquam exercitationem cupiditate at accusamus atque perspiciatis asperiores rem quam ipsa! Iusto obcaecati, dignissimos doloribus exercitationem alias eius dolores labore libero magni, ad illum velit tempora neque voluptatem fugit officia dolore assumenda adipisci recusandae ut, natus animi molestiae omnis! Nulla placeat deserunt atque itaque et laborum ab nesciunt. Est, maxime. Eos iure aliquid dolor necessitatibus soluta placeat veritatis, vitae accusamus. Expedita dicta corrupti odio voluptatem cumque? Unde dolorum, dicta dolores reiciendis impedit ipsum quod commodi ut vel velit totam repellat eaque asperiores labore doloremque deleniti maxime eum. Temporibus tempora, facere optio hic reprehenderit cum. Eaque error nesciunt quam labore eligendi consequatur dignissimos unde, ullam rem placeat sed, vero repellat cupiditate aspernatur quia et fuga ea similique rerum illo, tempore ut vel sit quo? Inventore saepe, voluptatem eos fuga voluptas reprehenderit, facere consequuntur eligendi minus eaque in placeat fugiat quibusdam veniam cumque aspernatur itaque! Itaque in delectus minus commodi voluptatem repellendus sit unde eius dignissimos rerum, inventore pariatur quibusdam enim recusandae quasi nihil numquam, eveniet aspernatur et. Reprehenderit dicta repudiandae tenetur dignissimos minima earum repellat! Provident quisquam libero quae, optio nihil excepturi veniam nobis dignissimos quam vel minima repellat ullam beatae voluptatum blanditiis, asperiores esse iste distinctio soluta magni et culpa iure totam laborum. Ullam porro soluta modi explicabo at, ex iusto odit.
            
         </div>
       </div>
@@ -159,6 +171,13 @@
             arrow.classList.remove('rotate-180');
           }
         }
+
+        let burger = document.querySelector('.burger');
+        let sidebar = document.querySelector('.sidebar');
+        burger.addEventListener('click', () => {
+          sidebar.classList.toggle('-left-full');
+          sidebar.classList.toggle('left-0');
+        })
       </script>
   </body>
 </html>
