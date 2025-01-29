@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -685,10 +685,6 @@ video {
   justify-content: space-between;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -780,6 +776,10 @@ video {
   padding-left: 4rem;
 }
 
+.pr-16 {
+  padding-right: 4rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -853,4 +853,38 @@ video {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+}
+
+.rtl\:relative:where([dir="rtl"], [dir="rtl"] *) {
+  position: relative;
+}
+
+.rtl\:left-5:where([dir="rtl"], [dir="rtl"] *) {
+  left: 1.25rem;
+}
+
+.rtl\:left-0:where([dir="rtl"], [dir="rtl"] *) {
+  left: 0px;
+}
+
+.rtl\:right-0:where([dir="rtl"], [dir="rtl"] *) {
+  right: 0px;
+}
+
+.rtl\:from-\[\#edca7d\]:where([dir="rtl"], [dir="rtl"] *) {
+  --tw-gradient-from: #edca7d var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(237 202 125 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.rtl\:to-cyan-500:where([dir="rtl"], [dir="rtl"] *) {
+  --tw-gradient-to: #06b6d4 var(--tw-gradient-to-position);
+}
+
+.rtl\:pr-16:where([dir="rtl"], [dir="rtl"] *) {
+  padding-right: 4rem;
+}
+
+.rtl\:pl-0:where([dir="rtl"], [dir="rtl"] *) {
+  padding-left: 0px;
 }
